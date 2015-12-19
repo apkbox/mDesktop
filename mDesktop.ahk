@@ -433,8 +433,8 @@ sethotkeys:
 		Else
 			Hotkey , %switchModifier%%index% , off
 	}
-	Hotkey , %nexthotkey% , snext
-	Hotkey , %prevhotkey% , sprev
+;	Hotkey , %nexthotkey% , snext
+;	Hotkey , %prevhotkey% , sprev
 #MaxThreadsPerHotkey 1
 	Loop %numDesktops%
 	{
@@ -505,16 +505,16 @@ switchMenu:
 return
 
 snext:
-	SwitchToNextDesktop()
+;	SwitchToNextDesktop()
 return
 
 sprev:
-	SwitchToPrevDesktop()
+;	SwitchToPrevDesktop()
 return
 
 settings:
-	Hotkey , %nexthotkey% , off
-	Hotkey , %prevhotkey% , off
+;	Hotkey , %nexthotkey% , off
+;	Hotkey , %prevhotkey% , off
 	ctrlKey = ^
 	altKey = !
 	winKey = #
@@ -665,8 +665,8 @@ settings:
 return
 
 7guiclose:
-	Hotkey, %nexthotkey% , on
-	Hotkey, %prevhotkey% , on
+;	Hotkey, %nexthotkey% , on
+;	Hotkey, %prevhotkey% , on
 	gui 7: destroy
 return
 
@@ -871,14 +871,14 @@ else if (thesendmod=3)
 	{
 		
 		nexthotkey = %newnexthotkey%
-		Hotkey , %nexthotkey% , snext
+;		Hotkey , %nexthotkey% , snext
 		IniWrite , %nexthotkey%, %settings%, settings, switchnext
 	}
 
 	If newprevhotkey!=%prevhotkey%
 	{
 		prevhotkey = %newprevhotkey%
-		Hotkey , %prevhotkey% , sprev
+;		Hotkey , %prevhotkey% , sprev
 		IniWrite , %prevhotkey%, %settings%, settings, switchprev
 	}
 
@@ -898,8 +898,8 @@ else if (thesendmod=3)
 
 
 	
-	Hotkey, %nexthotkey% , on
-	Hotkey, %prevhotkey% , on
+;	Hotkey, %nexthotkey% , on
+;	Hotkey, %prevhotkey% , on
 
 
 	gosub sethotkeys
